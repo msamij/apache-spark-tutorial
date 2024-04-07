@@ -19,18 +19,12 @@ import net.jgp.books.spark.ch03.x.model.Book;
 /**
  * This example will read a CSV file, ingest it in a dataframe, convert the
  * dataframe to a dataset, and vice versa.
- * 
- * @author jgp
  */
 public class CsvToDatasetBookToDataframeApp implements Serializable {
   private static final long serialVersionUID = -1L;
 
   /**
    * This is a mapper class that will convert a Row to an instance of Book.
-   * You have full control over it - isn't it great that sometimes you have
-   * control?
-   * 
-   * @author jgp
    */
   class BookMapper implements MapFunction<Row, Book> {
     private static final long serialVersionUID = -2L;
@@ -43,7 +37,7 @@ public class CsvToDatasetBookToDataframeApp implements Serializable {
       b.setLink(value.getAs("link"));
       b.setTitle(value.getAs("title"));
 
-      // date case
+      // Date case.
       String dateAsString = value.getAs("releaseDate");
       if (dateAsString != null) {
         SimpleDateFormat parser = new SimpleDateFormat("M/d/yy");
@@ -54,13 +48,10 @@ public class CsvToDatasetBookToDataframeApp implements Serializable {
   }
 
   /**
-   * It starts here
-   * 
-   * @param args
+   * It starts here.
    */
   public static void main(String[] args) {
-    CsvToDatasetBookToDataframeApp app =
-        new CsvToDatasetBookToDataframeApp();
+    CsvToDatasetBookToDataframeApp app = new CsvToDatasetBookToDataframeApp();
     app.start();
   }
 
@@ -77,7 +68,8 @@ public class CsvToDatasetBookToDataframeApp implements Serializable {
     spark.sql("set spark.sql.legacy.timeParserPolicy=LEGACY");
 
     String filename = "data/books.csv";
-    Dataset<Row> df = spark.read().format("csv")
+    Dataset<Row> df = spark.read()
+        .format("csv")
         .option("inferSchema", "true")
         .option("header", "true")
         .load(filename);
@@ -86,29 +78,22 @@ public class CsvToDatasetBookToDataframeApp implements Serializable {
     df.show(5);
     df.printSchema();
 
-    Dataset<Book> bookDs = df.map(
-        new BookMapper(),
-        Encoders.bean(Book.class));
+    Dataset<Book> bookDs = df.map(new BookMapper(), Encoders.bean(Book.class));
+
     System.out.println("*** Books are now in a dataset of books");
     bookDs.show(5, 17);
     bookDs.printSchema();
 
     Dataset<Row> df2 = bookDs.toDF();
-    df2 = df2.withColumn(
-        "releaseDateAsString",
-        concat(
-            expr("releaseDate.year + 1900"), lit("-"),
-            expr("releaseDate.month + 1"), lit("-"),
-            df2.col("releaseDate.date")));
-    // Although you are getting a date out this process (pretty cool, huh?),
-    // this is not the recommended way to get a date. Have a look at chapter
-    // 7
-    // on ingestion for better ways.
-    df2 = df2
-        .withColumn(
-            "releaseDateAsDate",
-            to_date(df2.col("releaseDateAsString"), "yyyy-MM-dd"))
+    df2 = df2.withColumn("releaseDateAsString", concat(
+        expr("releaseDate.year + 1900"), lit("-"),
+        expr("releaseDate.month + 1"), lit("-"),
+        df2.col("releaseDate.date")));
+
+    df2 = df2.withColumn("releaseDateAsDate", to_date(
+        df2.col("releaseDateAsString"), "yyyy-MM-dd"))
         .drop("releaseDateAsString");
+
     System.out.println("*** Books are back in a dataframe");
     df2.show(5, 13);
     df2.printSchema();

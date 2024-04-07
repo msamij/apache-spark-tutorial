@@ -11,20 +11,12 @@ import org.apache.spark.sql.SparkSession;
 
 /**
  * Union of two dataframes.
- * 
- * @author jgp
  */
 public class DataframeUnionApp {
   private SparkSession spark;
 
-  /**
-   * main() is your entry point to the application.
-   * 
-   * @param args
-   */
   public static void main(String[] args) {
-    DataframeUnionApp app =
-        new DataframeUnionApp();
+    DataframeUnionApp app = new DataframeUnionApp();
     app.start();
   }
 
@@ -32,7 +24,7 @@ public class DataframeUnionApp {
    * The processing code.
    */
   private void start() {
-    // Creates a session on a local master
+    // Creates a session on a local master.
     this.spark = SparkSession.builder()
         .appName("Union of two dataframes")
         .master("local")
@@ -46,10 +38,8 @@ public class DataframeUnionApp {
   /**
    * Performs the union between the two dataframes.
    * 
-   * @param df1
-   *          Dataframe to union on
-   * @param df2
-   *          Dataframe to union from
+   * @param df1 Dataframe to union on.
+   * @param df2 Dataframe to union from.
    */
   private void combineDataframes(Dataset<Row> df1, Dataset<Row> df2) {
     Dataset<Row> df = df1.unionByName(df2);
@@ -68,9 +58,11 @@ public class DataframeUnionApp {
    * @return A dataframe
    */
   private Dataset<Row> buildWakeRestaurantsDataframe() {
-    Dataset<Row> df = this.spark.read().format("csv")
+    Dataset<Row> df = this.spark.read()
+        .format("csv")
         .option("header", "true")
         .load("data/Restaurants_in_Wake_County_NC.csv");
+
     df = df.withColumn("county", lit("Wake"))
         .withColumnRenamed("HSISID", "datasetId")
         .withColumnRenamed("NAME", "name")
@@ -88,26 +80,26 @@ public class DataframeUnionApp {
         .drop(df.col("OBJECTID"))
         .drop(df.col("GEOCODESTATUS"))
         .drop(df.col("PERMITID"));
+
     df = df.withColumn("id", concat(
-        df.col("state"),
-        lit("_"),
+        df.col("state"), lit("_"),
         df.col("county"), lit("_"),
         df.col("datasetId")));
-
-    // I left the following line if you want to play with repartitioning
-    // df = df.repartition(4);
 
     return df;
   }
 
   /**
-   * Builds the dataframe containing the Durham county restaurants
+   * Builds the dataframe containing the Durham county restaurants.
    * 
    * @return A dataframe
    */
   private Dataset<Row> buildDurhamRestaurantsDataframe() {
-    Dataset<Row> df = this.spark.read().format("json")
+    Dataset<Row> df = this.spark.read()
+        .format("json")
+        .option("multiline", true)
         .load("data/Restaurants_in_Durham_County_NC.json");
+
     df = df.withColumn("county", lit("Durham"))
         .withColumn("datasetId", df.col("fields.id"))
         .withColumn("name", df.col("fields.premise_name"))
@@ -119,21 +111,18 @@ public class DataframeUnionApp {
         .withColumn("tel", df.col("fields.premise_phone"))
         .withColumn("dateStart", df.col("fields.opening_date"))
         .withColumn("dateEnd", df.col("fields.closing_date"))
-        .withColumn("type",
-            split(df.col("fields.type_description"), " - ").getItem(1))
+        .withColumn("type", split(df.col("fields.type_description"), " - ").getItem(1))
         .withColumn("geoX", df.col("fields.geolocation").getItem(0))
         .withColumn("geoY", df.col("fields.geolocation").getItem(1))
         .drop(df.col("fields"))
         .drop(df.col("geometry"))
         .drop(df.col("record_timestamp"))
         .drop(df.col("recordid"));
-    df = df.withColumn("id",
-        concat(df.col("state"), lit("_"),
-            df.col("county"), lit("_"),
-            df.col("datasetId")));
 
-    // I left the following line if you want to play with repartitioning
-    // df = df.repartition(4);
+    df = df.withColumn("id", concat(
+        df.col("state"), lit("_"),
+        df.col("county"), lit("_"),
+        df.col("datasetId")));
 
     return df;
   }

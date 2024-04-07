@@ -9,8 +9,6 @@ import org.apache.spark.sql.SparkSession;
 
 /**
  * Converts an array to a Dataset of strings
- * 
- * @author jgp
  */
 public class ArrayToDatasetApp {
 
@@ -20,15 +18,12 @@ public class ArrayToDatasetApp {
   }
 
   private void start() {
-    SparkSession spark = SparkSession.builder()
-        .appName("Array to Dataset<String>")
-        .master("local")
-        .getOrCreate();
+    SparkSession spark = SparkSession.builder().appName("Array to Dataset<String>").master("local").getOrCreate();
 
-    String[] stringList =
-        new String[] { "Jean", "Liz", "Pierre", "Lauric" };
+    String[] stringList = new String[] { "Jean", "Liz", "Pierre", "Lauric" };
     List<String> data = Arrays.asList(stringList);
     Dataset<String> ds = spark.createDataset(data, Encoders.STRING());
+
     ds.show();
     ds.printSchema();
   }

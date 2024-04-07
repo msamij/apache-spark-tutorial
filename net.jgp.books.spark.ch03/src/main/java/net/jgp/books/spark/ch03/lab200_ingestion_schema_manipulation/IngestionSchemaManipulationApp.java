@@ -57,15 +57,15 @@ public class IngestionSchemaManipulationApp {
                                 .drop("PERMITID")
                                 .drop("GEOCODESTATUS");
 
-                df = df.withColumn("id", concat(df.col("state"),
-                                lit("_"),
-                                df.col("county"),
-                                lit("_"),
+                df = df.withColumn("id", concat(
+                                df.col("state"), lit("_"),
+                                df.col("county"), lit("_"),
                                 df.col("datasetId")));
 
-                // Shows at most 5 rows from the dataframe
+                // Shows at most 5 rows from the dataframe.
                 System.out.println("*** Dataframe transformed");
                 df.show(5);
+                df.printSchema();
 
                 // For book only.
                 Dataset<Row> dfUsedForBook = df
@@ -78,8 +78,6 @@ public class IngestionSchemaManipulationApp {
                                 .drop("address1")
                                 .drop("datasetId");
                 dfUsedForBook.show(5, 15);
-
-                df.printSchema();
 
                 System.out.println("*** dfusedforbookschema.");
                 dfUsedForBook.printSchema();

@@ -15,11 +15,6 @@ import org.apache.spark.sql.SparkSession;
  */
 public class JsonIngestionSchemaManipulationApp {
 
-        /**
-         * main() is your entry point to the application.
-         * 
-         * @param args
-         */
         public static void main(String[] args) {
                 JsonIngestionSchemaManipulationApp app = new JsonIngestionSchemaManipulationApp();
                 app.start();
@@ -29,17 +24,19 @@ public class JsonIngestionSchemaManipulationApp {
          * The processing code.
          */
         private void start() {
-                // Creates a session on a local master
+                // Creates a session on a local master.
                 SparkSession spark = SparkSession.builder()
                                 .appName("Restaurants in Durham County, NC")
                                 .master("local[*]")
                                 .getOrCreate();
 
-                // Reads a JSON file called Restaurants_in_Durham_County_NC.json, stores
-                // it
-                // in a dataframe
-                Dataset<Row> df = spark.read().format("json")
+                // Reads a JSON file called Restaurants_in_Durham_County_NC.json, stores it
+                // in a dataframe.
+                Dataset<Row> df = spark.read()
+                                .format("json")
+                                .option("multiline", true)
                                 .load("data/Restaurants_in_Durham_County_NC.json");
+
                 System.out.println("*** Right after ingestion");
                 df.show(5);
                 df.printSchema();
@@ -56,14 +53,14 @@ public class JsonIngestionSchemaManipulationApp {
                                 .withColumn("tel", df.col("fields.premise_phone"))
                                 .withColumn("dateStart", df.col("fields.opening_date"))
                                 .withColumn("dateEnd", df.col("fields.closing_date"))
-                                .withColumn("type",
-                                                split(df.col("fields.type_description"), " - ").getItem(1))
+                                .withColumn("type", split(df.col("fields.type_description"), " - ").getItem(1))
                                 .withColumn("geoX", df.col("fields.geolocation").getItem(0))
                                 .withColumn("geoY", df.col("fields.geolocation").getItem(1));
-                df = df.withColumn("id",
-                                concat(df.col("state"), lit("_"),
-                                                df.col("county"), lit("_"),
-                                                df.col("datasetId")));
+
+                df = df.withColumn("id", concat(
+                                df.col("state"), lit("_"),
+                                df.col("county"), lit("_"),
+                                df.col("datasetId")));
 
                 System.out.println("*** Dataframe transformed");
                 df.show(5);
@@ -72,11 +69,9 @@ public class JsonIngestionSchemaManipulationApp {
                 System.out.println("*** Looking at partitions");
                 Partition[] partitions = df.rdd().partitions();
                 int partitionCount = partitions.length;
-                System.out.println("Partition count before repartition: " +
-                                partitionCount);
+                System.out.println("Partition count before repartition: " + partitionCount);
 
                 df = df.repartition(4);
-                System.out.println("Partition count after repartition: " +
-                                df.rdd().partitions().length);
+                System.out.println("Partition count after repartition: " + df.rdd().partitions().length);
         }
 }
