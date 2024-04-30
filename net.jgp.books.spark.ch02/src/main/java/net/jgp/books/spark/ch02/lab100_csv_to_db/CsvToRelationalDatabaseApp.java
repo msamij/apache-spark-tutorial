@@ -38,7 +38,7 @@ public class CsvToRelationalDatabaseApp {
     df = df.withColumn("name", concat(df.col("lname"), lit(", "), df.col("fname")));
 
     // Step 3: Save:
-    // The connection URL, assuming your PostgreSQL instance runs locally on the
+    // The connection URL, assuming your MySQL instance runs locally on the
     // default port, and the database we use is "spark_labs".
     String dbConnectionUrl = "jdbc:mysql://localhost:3306/spark_labs";
 
