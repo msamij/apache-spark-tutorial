@@ -1,0 +1,268 @@
+2024.04.30 15:24:30 INFO  Started: Metals version 1.3.0 in folders '/home/muhammadsami/Public/MuhammadSami/Projects/Spark' for client Visual Studio Code 1.88.1.[0m
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [scribe.slf4j.ScribeServiceProvider@49c8998a]
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@a663dce]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@49c8998a]
+2024.04.30 15:24:31 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.[0m
+2024.04.30 15:24:45 INFO  running '/home/muhammadsami/.local/share/coursier/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2024.04.30 15:24:46 ERROR [info] [launcher] getting Scala 2.12.4 (for sbt)...[0m
+2024.04.30 15:24:54 INFO  no build target found for /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala. Using presentation compiler with project's scala-library version: 3.3.3[0m
+2024.04.30 15:24:57 ERROR [info] [launcher] getting org.scala-sbt sbt 1.0.3  (this may take some time)...[0m
+2024.04.30 15:25:03 ERROR WARNING: A terminally deprecated method in java.lang.System has been called[0m
+2024.04.30 15:25:03 ERROR WARNING: System::setSecurityManager has been called by sbt.TrapExit$ (file:/home/muhammadsami/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/run_2.12-1.0.3.jar)[0m
+2024.04.30 15:25:03 ERROR WARNING: Please consider reporting this to the maintainers of sbt.TrapExit$[0m
+2024.04.30 15:25:03 ERROR WARNING: System::setSecurityManager will be removed in a future release[0m
+2024.04.30 15:25:05 ERROR error: error while loading String, class file '/modules/java.base/java/lang/String.class' is broken[0m
+2024.04.30 15:25:05 ERROR (class java.lang.NullPointerException/Cannot invoke "scala.tools.nsc.Global$Run.typerPhase()" because the return value of "scala.tools.nsc.Global.currentRun()" is null)[0m
+2024.04.30 15:25:08 INFO  [info] Loading settings from metals.sbt ...[0m
+2024.04.30 15:25:08 INFO  [info] Loading project definition from /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch05/project/project/project[0m
+2024.04.30 15:25:09 INFO  [info] Updating {file:/home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch05/project/project/project/}net-jgp-books-spark-ch05-build-build-build...[0m
+2024.04.30 15:25:09 INFO  [warn] 	::::::::::::::::::::::::::::::::::::::::::::::[0m
+2024.04.30 15:25:09 INFO  [warn] 	::          UNRESOLVED DEPENDENCIES         ::[0m
+2024.04.30 15:25:09 INFO  [warn] 	::::::::::::::::::::::::::::::::::::::::::::::[0m
+2024.04.30 15:25:09 INFO  [warn] 	:: ch.epfl.scala#sbt-bloop;1.4.6: Resolution failed several times for dependency: ch.epfl.scala#sbt-bloop;1.4.6 {compile=[default(compile)]}:: [0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	:: org.scala-lang#scala-library;2.12.4: Resolution failed several times for dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], provided=[default(compile)]}:: [0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	:: org.scala-sbt#sbt;1.0.3: Resolution failed several times for dependency: org.scala-sbt#sbt;1.0.3 {provided=[default(compile)]}:: [0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	:: org.scala-lang#scala-compiler;2.12.4: Resolution failed several times for dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}:: [0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [warn] 	::::::::::::::::::::::::::::::::::::::::::::::[0m
+2024.04.30 15:25:09 INFO  [warn] [0m
+2024.04.30 15:25:09 INFO  [warn] 	Note: Some unresolved dependencies have extra attributes.  Check that these dependencies exist with the requested attributes.[0m
+2024.04.30 15:25:09 INFO  [warn] 		ch.epfl.scala:sbt-bloop:1.4.6 (scalaVersion=2.12, sbtVersion=1.0)[0m
+2024.04.30 15:25:09 INFO  [warn] [0m
+2024.04.30 15:25:09 INFO  [warn] 	Note: Unresolved dependencies path:[0m
+2024.04.30 15:25:09 INFO  [warn] 		ch.epfl.scala:sbt-bloop:1.4.6 (scalaVersion=2.12, sbtVersion=1.0) (/home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch05/project/project/project/metals.sbt#L6-7)[0m
+2024.04.30 15:25:09 INFO  [warn] 		  +- default:net-jgp-books-spark-ch05-build-build-build:0.1-SNAPSHOT (scalaVersion=2.12, sbtVersion=1.0)[0m
+2024.04.30 15:25:09 INFO  [warn] 		org.scala-lang:scala-library:2.12.4 ((sbt.Classpaths.jvmBaseSettings) Defaults.scala#L2031)[0m
+2024.04.30 15:25:09 INFO  [warn] 		  +- default:net-jgp-books-spark-ch05-build-build-build:0.1-SNAPSHOT (scalaVersion=2.12, sbtVersion=1.0)[0m
+2024.04.30 15:25:09 INFO  [warn] 		org.scala-sbt:sbt:1.0.3[0m
+2024.04.30 15:25:09 INFO  [warn] 		  +- default:net-jgp-books-spark-ch05-build-build-build:0.1-SNAPSHOT (scalaVersion=2.12, sbtVersion=1.0)[0m
+2024.04.30 15:25:09 INFO  [warn] 		org.scala-lang:scala-compiler:2.12.4[0m
+2024.04.30 15:25:09 INFO  [warn] 		  +- default:net-jgp-books-spark-ch05-build-build-build:0.1-SNAPSHOT (scalaVersion=2.12, sbtVersion=1.0)[0m
+2024.04.30 15:25:09 INFO  [error] sbt.librarymanagement.ResolveException: unresolved dependency: ch.epfl.scala#sbt-bloop;1.4.6: Resolution failed several times for dependency: ch.epfl.scala#sbt-bloop;1.4.6 {compile=[default(compile)]}:: [0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] [0m
+2024.04.30 15:25:09 INFO  [error] unresolved dependency: org.scala-lang#scala-library;2.12.4: Resolution failed several times for dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], provided=[default(compile)]}:: [0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] [0m
+2024.04.30 15:25:09 INFO  [error] unresolved dependency: org.scala-sbt#sbt;1.0.3: Resolution failed several times for dependency: org.scala-sbt#sbt;1.0.3 {provided=[default(compile)]}:: [0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] [0m
+2024.04.30 15:25:09 INFO  [error] unresolved dependency: org.scala-lang#scala-compiler;2.12.4: Resolution failed several times for dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}:: [0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:09 INFO  [error] [0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvyActions$.resolveAndRetrieve(IvyActions.scala:331)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvyActions$.$anonfun$updateEither$1(IvyActions.scala:205)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt$Module.$anonfun$withModule$1(Ivy.scala:229)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt.$anonfun$withIvy$1(Ivy.scala:190)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt.sbt$internal$librarymanagement$IvySbt$$action$1(Ivy.scala:70)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt$$anon$3.call(Ivy.scala:77)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:113)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$GlobalLock.withChannelRetries$1(Locks.scala:91)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$GlobalLock.$anonfun$withFileLock$1(Locks.scala:119)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Using$.withResource(Using.scala:12)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Using$.apply(Using.scala:9)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$GlobalLock.withFileLock(Locks.scala:119)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:71)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:59)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$.apply0(Locks.scala:47)[0m
+2024.04.30 15:25:09 INFO  [error] 	at xsbt.boot.Locks$.apply(Locks.scala:36)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt.withDefaultLogger(Ivy.scala:77)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt.withIvy(Ivy.scala:185)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt.withIvy(Ivy.scala:182)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvySbt$Module.withModule(Ivy.scala:228)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.librarymanagement.IvyActions$.updateEither(IvyActions.scala:190)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.librarymanagement.ivy.IvyDependencyResolution.update(IvyDependencyResolution.scala:20)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:56)[0m
+2024.04.30 15:25:09 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:38)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:91)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:68)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$19(LibraryManagement.scala:104)[0m
+2024.04.30 15:25:10 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:224)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:104)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:87)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChanged$1(Tracked.scala:149)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:118)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask$5(Defaults.scala:2353)[0m
+2024.04.30 15:25:10 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:44)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:42)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.std.Transform$$anon$4.work(System.scala:64)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:257)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:16)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.Execute.work(Execute.scala:266)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:257)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:167)[0m
+2024.04.30 15:25:10 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:32)[0m
+2024.04.30 15:25:10 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+2024.04.30 15:25:10 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)[0m
+2024.04.30 15:25:10 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+2024.04.30 15:25:10 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)[0m
+2024.04.30 15:25:10 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
+2024.04.30 15:25:10 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:833)[0m
+2024.04.30 15:25:10 INFO  Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? [error] (*:update) sbt.librarymanagement.ResolveException: unresolved dependency: ch.epfl.scala#sbt-bloop;1.4.6: Resolution failed several times for dependency: ch.epfl.scala#sbt-bloop;1.4.6 {compile=[default(compile)]}:: [0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] [0m
+2024.04.30 15:25:10 INFO  [error] unresolved dependency: org.scala-lang#scala-library;2.12.4: Resolution failed several times for dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], provided=[default(compile)]}:: [0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] [0m
+2024.04.30 15:25:10 INFO  [error] unresolved dependency: org.scala-sbt#sbt;1.0.3: Resolution failed several times for dependency: org.scala-sbt#sbt;1.0.3 {provided=[default(compile)]}:: [0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] [0m
+2024.04.30 15:25:10 INFO  [error] unresolved dependency: org.scala-lang#scala-compiler;2.12.4: Resolution failed several times for dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}:: [0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  [error] 	Index 1 out of bounds for length 1[0m
+2024.04.30 15:25:10 INFO  time: ran 'sbt bloopInstall' in 25s[0m
+2024.04.30 15:25:10 ERROR sbt command failed: /home/muhammadsami/.local/share/coursier/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall[0m
+2024.04.30 15:25:12 INFO  time: code lens generation in 1.48s[0m
+2024.04.30 15:25:12 INFO  time: code lens generation in 1.48s[0m
+2024.04.30 15:25:12 INFO  time: code lens generation in 1.48s[0m
+2024.04.30 15:25:22 WARN  no build target for: /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala[0m
+Apr 30, 2024 3:25:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+Apr 30, 2024 3:25:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25
+2024.04.30 15:25:24 WARN  no build target for: /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala[0m
+2024.04.30 15:25:25 WARN  no build target for: /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala[0m
+2024.04.30 15:25:27 WARN  no build target for: /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala[0m
+2024.04.30 15:25:28 WARN  no build target for: /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala[0m
+2024.04.30 15:25:33 WARN  no build target for: /home/muhammadsami/Public/MuhammadSami/Projects/Spark/net.jgp.books.spark.ch09/src/main/scala/net/jgp/books/spark/ch09/lab100_photo_datasource/PhotoMetadataIngestionScalaApp.scala[0m
+Apr 30, 2024 3:25:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-38-372.md
+Apr 30, 2024 3:25:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-49-151.md
+Apr 30, 2024 3:25:50 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-50-793.md
+Apr 30, 2024 3:25:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-51-334.md
+Apr 30, 2024 3:25:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "jdt://contents/spark-sql_2.12-3.1.2.jar/org.apache.spark.sql/SparkSession.class?%3Dspark-in-action2-chapter09%2F%5C%2Fhome%5C%2Fmuhammadsami%5C%2F.m2%5C%2Frepository%5C%2Forg%5C%2Fapache%5C%2Fspark%5C%2Fspark-sql_2.12%5C%2F3.1.2%5C%2Fspark-sql_2.12-3.1.2.jar%3D%2Fmaven.pomderived%3D%2Ftrue%3D%2F%3D%2Fjavadoc_location%3D%2Fjar%3Afile%3A%5C%2Fhome%5C%2Fmuhammadsami%5C%2F.m2%5C%2Frepository%5C%2Forg%5C%2Fapache%5C%2Fspark%5C%2Fspark-sql_2.12%5C%2F3.1.2%5C%2Fspark-sql_2.12-3.1.2-javadoc.jar%5C%21%5C%2F%3D%2F%3D%2Fmaven.groupId%3D%2Forg.apache.spark%3D%2F%3D%2Fmaven.artifactId%3D%2Fspark-sql_2.12%3D%2F%3D%2Fmaven.version%3D%2F3.1.2%3D%2F%3D%2Fmaven.scope%3D%2Fcompile%3D%2F%3D%2Fmaven.pomderived%3D%2Ftrue%3D%2F%3Corg.apache.spark.sql%28SparkSession.class"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "jdt" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:732)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:729)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:639)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+Apr 30, 2024 3:25:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 126
+Apr 30, 2024 3:25:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-54-877.md
+Apr 30, 2024 3:25:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-55-113.md
+Apr 30, 2024 3:25:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-56-115.md
+Apr 30, 2024 3:25:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-25-57-700.md
+Apr 30, 2024 3:26:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-26-02-132.md
+Apr 30, 2024 3:26:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-26-02-591.md
+Apr 30, 2024 3:26:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-26-05-666.md
+Apr 30, 2024 3:26:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "jdt://contents/spark-sql_2.12-3.1.2.jar/org.apache.spark.sql/Dataset.class?%3Dspark-in-action2-chapter09%2F%5C%2Fhome%5C%2Fmuhammadsami%5C%2F.m2%5C%2Frepository%5C%2Forg%5C%2Fapache%5C%2Fspark%5C%2Fspark-sql_2.12%5C%2F3.1.2%5C%2Fspark-sql_2.12-3.1.2.jar%3D%2Fmaven.pomderived%3D%2Ftrue%3D%2F%3D%2Fjavadoc_location%3D%2Fjar%3Afile%3A%5C%2Fhome%5C%2Fmuhammadsami%5C%2F.m2%5C%2Frepository%5C%2Forg%5C%2Fapache%5C%2Fspark%5C%2Fspark-sql_2.12%5C%2F3.1.2%5C%2Fspark-sql_2.12-3.1.2-javadoc.jar%5C%21%5C%2F%3D%2F%3D%2Fmaven.groupId%3D%2Forg.apache.spark%3D%2F%3D%2Fmaven.artifactId%3D%2Fspark-sql_2.12%3D%2F%3D%2Fmaven.version%3D%2F3.1.2%3D%2F%3D%2Fmaven.scope%3D%2Fcompile%3D%2F%3D%2Fmaven.pomderived%3D%2Ftrue%3D%2F%3Corg.apache.spark.sql%28Dataset.class"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "jdt" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:732)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:729)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:639)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+Apr 30, 2024 3:26:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 145
+Apr 30, 2024 3:26:11 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-26-11-894.md
+Apr 30, 2024 3:26:13 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-26-13-945.md
+Apr 30, 2024 3:26:22 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/muhammadsami/Public/MuhammadSami/Projects/Spark/.metals/.reports/metals-full/2024-04-30/r_compiler-error_15-26-22-005.md
+2024.04.30 15:26:24 INFO  Shutting down server[0m
+2024.04.30 15:26:24 INFO  shutting down Metals[0m
+2024.04.30 15:26:24 INFO  Exiting server[0m
